@@ -13,6 +13,7 @@ public class MergeSortClassTest
 
     public MergeSortClassTest()
     {
+        /* Creating a set of persons */
         persons = new Person[10];
         persons[0] = new Person("Joshua");
         persons[1] = new Person("James");
@@ -31,6 +32,9 @@ public class MergeSortClassTest
         return this.persons;
     }
 
+    /**
+     * Class used to represent a person
+     */
     private class Person implements Comparable<Person>
     {
 
@@ -40,12 +44,16 @@ public class MergeSortClassTest
         {
             this.name = name;
         }
-        
+
         public String getName()
         {
             return this.name;
         }
 
+        /**
+         * This method is called by the sorting algorithm
+         * We compare persons and decide their sorting order based on their name
+         */
         @Override
         public int compareTo(Person otherPerson)
         {
@@ -63,8 +71,11 @@ public class MergeSortClassTest
     {
         MergeSortClassTest test = new MergeSortClassTest();
 
-        MergeSort<Person> sort = new MergeSort<Person>(test.getPersons());
+        /* Create a new instance of the mergesort Algorithm and sort the array of persons */
+        MergeSort<Person> sort = new MergeSort<>(test.getPersons());
         sort.sort();
+
+        /* Printing the sorted items */
         System.out.println("Printing Sorted Items: ");
         for (Person x : sort.getSortedItems())
         {
