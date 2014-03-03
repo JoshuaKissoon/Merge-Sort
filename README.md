@@ -91,3 +91,7 @@ for (Person x : sort.getSortedItems())
 ```
 
 The examples are also included in the source files
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/JoshuaKissoon/merge-sort/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
